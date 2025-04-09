@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OrderTracker": {
+      "commandName": "Project",
+      "commandLineArgs": "\"\\\\192.168.1.103\\share\\共有　営業部\\2) 受注票共有\" 2025/04/01 c:\\test\\OrderTracking.log"
+    }
+  }
+}
