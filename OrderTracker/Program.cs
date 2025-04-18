@@ -41,7 +41,12 @@ namespace OrderTracker
         {
             if (args.Length < 2)
             {
-                Console.WriteLine("必須引数が指定されていません。");
+                // コマンドライン引数の例を表示
+                Console.WriteLine("コマンドライン引数の例: OrderTracker.exe \"\\\\192.168.1.103\\share\\共有　営業部\\2) 受注票共有\" 2023/04/01 output.txt");
+                Console.WriteLine("引数1: 受注票保存フォルダ");
+                Console.WriteLine("引数2: 現行受注ファイルフォーマット開始日");
+                Console.WriteLine("引数3: 標準出力のリダイレクト先（省略可）");
+
                 return;
             }
 
@@ -79,7 +84,7 @@ namespace OrderTracker
         static void MainFunction(string firstArg, DateTime dateTime)
         {
             Console.WriteLine($"指定されたフォルダ: {firstArg}");
-            Console.WriteLine($"指定された日時: {dateTime.Date}");
+            Console.WriteLine($"指定された日付: {dateTime.ToString("yyyy/MM/dd")}");
 
             // キー入力を監視するためのタスクを開始
             CancellationTokenSource cts = new CancellationTokenSource();
